@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let AccountBalance = 0;
+        function Deposit(amount){
+            AccountBalance += amount;
+            alert("Amount Deposited Successfully \n Current Balance: " + AccountBalance);
+        }
+        function WithDraw(amount){
+            if(AccountBalance < amount){
+                alert("Insufficient Balance");
+            }else{
+                AccountBalance -= amount;
+                alert("Amount Withdrawn Successfully \n Current Balance: " + AccountBalance);
+            }
+        }
+        function Balance(){
+            alert("Current Balance: " + AccountBalance);
+        }
+        function Exit(){
+            alert("Thank You for Using Our Service");
+        }
+
+        while(true){
+            let choice = prompt("Enter Your Choice: \n 1. Deposit \n 2. Withdraw \n 3. Balance \n 4. Exit");
+            if(choice == 1){
+                let amount = parseInt(prompt("Enter Amount to Deposit: "));
+                Deposit(amount);
+            }else if(choice == 2){
+                let amount = parseInt(prompt("Enter Amount to Withdraw: "));
+                WithDraw(amount);
+            }else if(choice == 3){
+                Balance();
+            }else if(choice == 4){
+                Exit();
+                break;
+            }else{
+                alert("Invalid Choice");
+            }
+        }
+    </script>
+</body>
+</html>
