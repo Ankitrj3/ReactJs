@@ -1,0 +1,82 @@
+.login{
+height: 100vh;
+background: linear-gradient(rgba(164, 126, 11, 0.5), rgba(39, 11, 96, 0.5)), 
+            url("https://images.freeimages.com/images/large-previews/227/autumn-1172545.jpg?fmt=webp&h=350") 
+            center;
+background-size:cover;
+display: flex;
+justify-content: center;
+align-items: center;
+    .card{
+        width: 50%;
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        min-height: 600px;
+        .left{
+            flex: 1;
+            background: linear-gradient(rgba(164, 126, 11, 0.5), rgba(39, 11, 96, 0.5)), 
+            url("https://images.freeimages.com/images/large-previews/c85/abstract-polygonal-low-poly-free-photos-texture-1-1140458.jpg") 
+            center;
+            background-size: cover;
+            padding: 50px;
+            flex-direction: column;
+            gap: 60px;
+            color: white;
+
+            h1{font-size: 100px;
+            line-height: 100px;
+            }
+            p{font-size: 14px;
+            gap:20px;}
+            span{
+            font-size: 12px;
+            margin-top: 50px;
+            }
+            button{
+            padding: 10px;
+            width: 50%;
+            border-radius: 20px;
+            background-color: rgb(187, 46, 192);
+            }
+            button:hover{
+                background-color: rgb(107, 26, 107);
+                color: aliceblue;
+            }
+        }
+        .right{
+            flex: 1;
+            padding: 50px;
+            flex-direction: column;
+            gap: 40px;
+            background-color: rgba(86, 82, 82, 0.102);
+            h1{font-size: 50px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding:30px;
+            }
+            form{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            gap:30px;
+                input{
+                    background-color: rgba(215, 250, 244, 0.272);
+                    padding: 13px;
+                    border-radius: 15px;
+                    gap: 30px;
+                }
+                button{
+                    background-color: rgba(43, 7, 76, 0.324);
+                    padding: 15px;
+                    border-radius: 20px;
+                }
+                button:hover{
+                    background-color: rgb(107, 26, 107);
+                    color: aliceblue;
+                }
+                
+            }
+            
+        }
+    }
+}
