@@ -1,0 +1,88 @@
+.register {
+    background: linear-gradient(rgba(164, 126, 11, 0.5), rgba(39, 11, 96, 0.5)), 
+                url("https://images.freeimages.com/images/large-previews/227/autumn-1172545.jpg?fmt=webp&h=350") 
+                center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+    .card {
+        min-height: 600px;
+        display: flex;
+        width: 50%;
+        border-radius: 50px;
+        overflow: hidden;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+
+        .left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: aliceblue;
+            padding: 20px;
+            gap: 40px;
+
+            button {
+                padding: 10px;
+                &:hover {
+                    color: black; // Button text color changes to black on hover
+                }
+            }
+
+            h1 {
+                font-size: 60px;
+                padding: 20px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input {
+                    padding: 10px;
+                    border-radius: 10px;
+                    font-size: 16px;
+                }
+
+                button {
+                    padding: 10px;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: rgba(43, 7, 76, 0.8);
+                    color: white;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: rgba(43, 7, 76, 1); // Darker background on hover
+                        transform: scale(1.05); // Slightly increase size on hover
+                    }
+                }
+            }
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(rgba(164, 126, 11, 0.5), rgba(39, 11, 96, 0.5)), 
+                        url("https://images.pexels.com/photos/4345410/pexels-photo-4345410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 
+                        center;
+            background-size: cover;
+            color: white;
+
+            h1 {
+                font-size: 100px;
+            }
+        }
+    }
+}
