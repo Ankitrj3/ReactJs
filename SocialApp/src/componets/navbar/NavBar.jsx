@@ -1,6 +1,5 @@
 import React from 'react'
 import './navBar.scss'
-import RightBar from '../rightBar/RightBar'
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import GridViewIcon from '@mui/icons-material/GridView';
