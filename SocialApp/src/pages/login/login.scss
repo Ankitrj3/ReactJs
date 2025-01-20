@@ -38,10 +38,13 @@ align-items: center;
             width: 50%;
             border-radius: 20px;
             background-color: rgb(187, 46, 192);
+            cursor: pointer;
+            transition: all 0.3s ease;
             }
             button:hover{
                 background-color: rgb(107, 26, 107);
                 color: aliceblue;
+                transform: scale(1.05);
             }
         }
         .right{
@@ -69,10 +72,13 @@ align-items: center;
                     background-color: rgba(43, 7, 76, 0.324);
                     padding: 15px;
                     border-radius: 20px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
                 }
                 button:hover{
                     background-color: rgb(107, 26, 107);
                     color: aliceblue;
+                    transform: scale(1.05);
                 }
                 
             }
