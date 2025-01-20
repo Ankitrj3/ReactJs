@@ -18,7 +18,9 @@ function App() {
         <NavBar/>
         <div style={{display:"flex"}}>
           <LeftBar/>
+          <div style={{flex:6}}>
           <Outlet/>{/* Outlet is a placeholder for the child routes*/}
+          </div>
           <RightBar/>
         </div>
       </div>

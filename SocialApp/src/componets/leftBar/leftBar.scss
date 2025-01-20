@@ -1,7 +1,11 @@
 .leftBar{
     padding: 10px;
     background: linear-gradient(to right, rgb(233, 229, 224), rgb(200, 200, 200));
-
+    flex: 2;
+    position: sticky;
+    top: 45px; 
+    height: calc(100vh - 45px);
+    
     .container{
         padding:20px;
         hr{
@@ -22,7 +26,7 @@
             .user{
                 display:flex;
                 align-items:center;
-                gao: 10px;
+                gap: 10px;
                 img{
                     width: 30px;
                     height: 30px;
@@ -30,12 +34,11 @@
                     object-fit: cover;
                 }
                 span{
-
                 }
             }
             .item{
                 display: flex;
-                flex-direction: horizontal;
+                flex-direction: row;
                 gap: 10px;
                 padding: 10px;
                 margin-top: 5px;
@@ -43,7 +46,6 @@
                     font-size: 20px;
                     font-weight: lighter;
                     color: black;
-                    gap: 10px;
                 }
             }
         }
