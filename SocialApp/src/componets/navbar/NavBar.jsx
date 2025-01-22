@@ -6,7 +6,7 @@ import GridViewIcon from '@mui/icons-material/GridView';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SearchIcon from '@mui/icons-material/Search';
-import BedtimeIcon from '@mui/icons-material/Bedtime';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import { Link } from 'react-router-dom';
 export default function NavBar() {
   return (
@@ -16,7 +16,7 @@ export default function NavBar() {
         <span>SOCIALBits...</span>
         </Link>
         <HomeIcon/>
-        <BedtimeIcon/>
+        <LightModeIcon/>
         <GridViewIcon/>
         <div className='search'>
           <SearchIcon/>
