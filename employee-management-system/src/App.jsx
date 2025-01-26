@@ -4,25 +4,31 @@ import Login from './components/Auth/Login';
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard';
 import AdminDashboard from './components/Dashboard/AdminDashboard';
 import { AuthContext } from './context/AuthProvider';
+import { setLocalStorage, getLocalStorage } from './utils/LocalStorage';
 
 function App() {
+  useEffect(() => {
+    setLocalStorage();  
+  }, []);
+  
   const [user, setUser] = useState(null);
   const authData = useContext(AuthContext);
-
   console.log("Auth data:", authData);
 
   const handleLogin = (email, password) => {
     console.log("Attempting login with", email, password);
-    if (email === '' && password === '') {
+    console.log("Employees in authData:", authData.employees);  
+
+    if (email === 'admin@example.com' && password === '123') {
       setUser("admin");
-    } else if (authData && authData.employees && authData.employees.find(e => e.email === email && e.password === password)) {
+    } 
+    else if (authData && authData.employees.find(e => email === e.email && password === e.password)) {
       setUser("employee");
+    } 
+    else {
+      console.log("Invalid login credentials");
     }
   };
-
-  useEffect(() => {
-    console.log("User state updated:", user);
-  }, [user]);
 
   return (
     <>
