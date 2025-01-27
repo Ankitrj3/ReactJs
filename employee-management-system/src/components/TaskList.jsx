@@ -1,49 +1,27 @@
 import React from 'react'
+import AcceptList from './TaskList/AcceptList'
+import NewTask from './TaskList/NewTask'
+import CompleteList from './TaskList/CompleteList'
+import FailedList from './TaskList/FailedList'
 
-const TaskList = () => {
+const TaskList = ({data}) => {
+     console.log(data)
   return (
     <div className='h-[50%] width-full overflow-x-auto flex items-center justify-start flex-nowrap gap-5  mt-10 p-3'>
-      <div className='flex-shrink-0 h-full w-[300px] bg-amber-400 rounded-2xl'>
-           <div className='flex justify-between items-center p-3 '>
-            <h3 className='bg-red-600 text-sm px-3 py-2 rounded-2xl text-white'>High</h3>
-            <h4 className='text-sm'>25 jan 2025</h4>
-           </div>
-           <h2 className='mt-5 text-xl font-semibold p-3'>Make Your Portfolio</h2>
-           <p className='text-sm mt-3 p-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus libero aut quod quia cupiditate voluptas nobis. Sequi quas minus exercitationem.</p>
-      </div>
-      <div className='flex-shrink-0 h-full w-[300px] bg-blue-400 rounded-2xl'>
-           <div className='flex justify-between items-center p-3 '>
-            <h3 className='bg-red-600 text-sm px-3 py-2 rounded-2xl text-white'>High</h3>
-            <h4 className='text-sm'>25 jan 2025</h4>
-           </div>
-           <h2 className='mt-5 text-xl font-semibold p-3'>Make Your Portfolio</h2>
-           <p className='text-sm mt-3 p-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus libero aut quod quia cupiditate voluptas nobis. Sequi quas minus exercitationem.</p>
-      </div>
-      <div className='flex-shrink-0 h-full w-[300px] bg-red-400 rounded-2xl'>
-           <div className='flex justify-between items-center p-3 '>
-            <h3 className='bg-red-600 text-sm px-3 py-2 rounded-2xl text-white'>High</h3>
-            <h4 className='text-sm'>25 jan 2025</h4>
-           </div>
-           <h2 className='mt-5 text-xl font-semibold p-3'>Make Your Portfolio</h2>
-           <p className='text-sm mt-3 p-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus libero aut quod quia cupiditate voluptas nobis. Sequi quas minus exercitationem.</p>
-      </div>
-      <div className='flex-shrink-0 h-full w-[300px] bg-pink-400 rounded-2xl'>
-           <div className='flex justify-between items-center p-3 '>
-            <h3 className='bg-red-600 text-sm px-3 py-2 rounded-2xl text-white'>High</h3>
-            <h4 className='text-sm'>25 jan 2025</h4>
-           </div>
-           <h2 className='mt-5 text-xl font-semibold p-3'>Make Your Portfolio</h2>
-           <p className='text-sm mt-3 p-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus libero aut quod quia cupiditate voluptas nobis. Sequi quas minus exercitationem.</p>
-      </div>
-      <div className='flex-shrink-0 h-full w-[300px] bg-green-400 rounded-2xl'>
-           <div className='flex justify-between items-center p-3 '>
-            <h3 className='bg-red-600 text-sm px-3 py-2 rounded-2xl text-white'>High</h3>
-            <h4 className='text-sm'>25 jan 2025</h4>
-           </div>
-           <h2 className='mt-5 text-xl font-semibold p-3'>Make Your Portfolio</h2>
-           <p className='text-sm mt-3 p-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus libero aut quod quia cupiditate voluptas nobis. Sequi quas minus exercitationem.</p>
-      </div>
-      
+      {data.tasks.map((e,id)=>{
+          if(e.active){
+               return <AcceptList key={id}/>
+          }
+          if(e.completed){
+               return <CompleteList key={id}/>
+          }
+          if(e.newTask){
+               return <NewTask key={id}/>
+          }
+          if(e.fail){
+               return <FailedList key={id}/>
+          }
+      })}
     </div>
   )
 }
