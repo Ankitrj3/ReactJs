@@ -7,15 +7,24 @@ import { AuthContext } from './context/AuthProvider';
 import { setLocalStorage } from './utils/LocalStorage';
 
 function App() {
-  useEffect(() => {
-    setLocalStorage();  
-  }, []);
-  
-  
   const [user, setUser] = useState(null);
   const [loggedInUser, setLoggedInUser]=useState(null);
   const authData = useContext(AuthContext);
   console.log("Auth data:", authData);
+  // localStorage.clear();
+  useEffect(() => {
+    setLocalStorage();  
+  }, []);
+  
+  useEffect(()=>{
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if(loggedInUser){
+      const userData = JSON.parse(loggedInUser);
+      setUser(userData.role);
+      setLoggedInUser(userData.data);
+    }
+  },[])
+  
 
   // useEffect(()=>{
   //   if(authData){
@@ -38,7 +47,7 @@ function App() {
       if(employee){
         setUser("employee");
         setLoggedInUser(employee);
-        localStorage.setItem('loggedInUser',JSON.stringify('employee')); 
+        localStorage.setItem('loggedInUser',JSON.stringify({role:'employee',data:employee})); 
       }
     }
     

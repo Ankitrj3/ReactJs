@@ -10,8 +10,8 @@ const employee = [
         "newTask": false,
         "completed": true,
         "fail": false,
-        "title": "Task Title 1",
-        "description": "This is the description of task 1.",
+        "title": "Develop Homepage UI",
+        "description": "Design and implement the homepage user interface for the company's website using ReactJS and TailwindCSS.",
         "date": "2025-01-20",
         "category": "Development"
       },
@@ -20,8 +20,8 @@ const employee = [
         "newTask": true,
         "completed": false,
         "fail": true,
-        "title": "Task Title 2",
-        "description": "This is the description of task 2.",
+        "title": "Research Market Trends",
+        "description": "Analyze and summarize the latest market trends in the tech industry for the quarterly report.",
         "date": "2025-01-18",
         "category": "Research"
       },
@@ -30,8 +30,8 @@ const employee = [
         "newTask": true,
         "completed": false,
         "fail": false,
-        "title": "Task Title 3",
-        "description": "This is the description of task 3.",
+        "title": "Testing Payment Integration",
+        "description": "Perform testing on the new payment gateway integration to ensure reliability and security.",
         "date": "2025-01-15",
         "category": "Testing"
       }
@@ -41,7 +41,8 @@ const employee = [
       "newTask": 2,
       "failed": 1,
       "completed": 1
-    }
+    },
+    "totalTasks": 3 // Total number of tasks
   },
   {
     "id": 2,
@@ -54,8 +55,8 @@ const employee = [
         "newTask": true,
         "completed": false,
         "fail": true,
-        "title": "Task Title 1",
-        "description": "This is the description of task 1.",
+        "title": "Prepare Documentation",
+        "description": "Compile detailed project documentation for the recently completed backend system upgrade.",
         "date": "2025-01-21",
         "category": "Documentation"
       },
@@ -64,8 +65,8 @@ const employee = [
         "newTask": false,
         "completed": true,
         "fail": false,
-        "title": "Task Title 2",
-        "description": "This is the description of task 2.",
+        "title": "Deploy Cloud Infrastructure",
+        "description": "Deploy the updated application to the AWS cloud infrastructure and ensure proper configuration.",
         "date": "2025-01-16",
         "category": "Deployment"
       }
@@ -75,7 +76,8 @@ const employee = [
       "newTask": 1,
       "failed": 1,
       "completed": 1
-    }
+    },
+    "totalTasks": 2 // Total number of tasks
   },
   {
     "id": 3,
@@ -88,8 +90,8 @@ const employee = [
         "newTask": true,
         "completed": false,
         "fail": false,
-        "title": "Task Title 1",
-        "description": "This is the description of task 1.",
+        "title": "Feature Development: User Profile",
+        "description": "Develop the user profile feature, including editing and displaying user details.",
         "date": "2025-01-19",
         "category": "Development"
       },
@@ -98,8 +100,8 @@ const employee = [
         "newTask": false,
         "completed": true,
         "fail": false,
-        "title": "Task Title 2",
-        "description": "This is the description of task 2.",
+        "title": "Research Competitive Products",
+        "description": "Conduct research on competitors' products and create a comparative analysis report.",
         "date": "2025-01-18",
         "category": "Research"
       },
@@ -108,8 +110,8 @@ const employee = [
         "newTask": true,
         "completed": false,
         "fail": true,
-        "title": "Task Title 3",
-        "description": "This is the description of task 3.",
+        "title": "Bug Fixing: Login Issues",
+        "description": "Investigate and resolve reported login issues on the production environment.",
         "date": "2025-01-15",
         "category": "Testing"
       },
@@ -118,8 +120,8 @@ const employee = [
         "newTask": false,
         "completed": true,
         "fail": false,
-        "title": "Task Title 4",
-        "description": "This is the description of task 4.",
+        "title": "Update Technical Documentation",
+        "description": "Update the API documentation to reflect recent changes in the endpoints and data structure.",
         "date": "2025-01-14",
         "category": "Documentation"
       }
@@ -129,7 +131,8 @@ const employee = [
       "newTask": 2,
       "failed": 1,
       "completed": 2
-    }
+    },
+    "totalTasks": 4 // Total number of tasks
   },
   {
     "id": 4,
@@ -142,8 +145,8 @@ const employee = [
         "newTask": false,
         "completed": true,
         "fail": false,
-        "title": "Task Title 1",
-        "description": "This is the description of task 1.",
+        "title": "Research Security Best Practices",
+        "description": "Investigate security best practices for web applications and summarize recommendations.",
         "date": "2025-01-20",
         "category": "Research"
       },
@@ -152,8 +155,8 @@ const employee = [
         "newTask": true,
         "completed": false,
         "fail": true,
-        "title": "Task Title 2",
-        "description": "This is the description of task 2.",
+        "title": "Deploy Backend Services",
+        "description": "Deploy and test the updated backend services for the analytics system.",
         "date": "2025-01-17",
         "category": "Deployment"
       }
@@ -163,7 +166,8 @@ const employee = [
       "newTask": 1,
       "failed": 1,
       "completed": 1
-    }
+    },
+    "totalTasks": 2 // Total number of tasks
   },
   {
     "id": 5,
@@ -176,8 +180,8 @@ const employee = [
         "newTask": true,
         "completed": false,
         "fail": false,
-        "title": "Task Title 1",
-        "description": "This is the description of task 1.",
+        "title": "Create User Guide",
+        "description": "Draft a comprehensive user guide for the newly launched application features.",
         "date": "2025-01-19",
         "category": "Documentation"
       },
@@ -186,8 +190,8 @@ const employee = [
         "newTask": false,
         "completed": true,
         "fail": false,
-        "title": "Task Title 2",
-        "description": "This is the description of task 2.",
+        "title": "Develop Analytics Dashboard",
+        "description": "Implement an analytics dashboard to track user behavior and system performance.",
         "date": "2025-01-18",
         "category": "Development"
       },
@@ -196,8 +200,8 @@ const employee = [
         "newTask": true,
         "completed": false,
         "fail": true,
-        "title": "Task Title 3",
-        "description": "This is the description of task 3.",
+        "title": "Testing Notification System",
+        "description": "Perform testing on the notification system and fix any identified issues.",
         "date": "2025-01-17",
         "category": "Testing"
       }
@@ -207,7 +211,8 @@ const employee = [
       "newTask": 2,
       "failed": 1,
       "completed": 1
-    }
+    },
+    "totalTasks": 3 // Total number of tasks
   }
 ];
 
