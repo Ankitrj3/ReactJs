@@ -16,14 +16,14 @@ function App() {
     setLocalStorage();  
   }, []);
   
-  useEffect(()=>{
-    const loggedInUser = localStorage.getItem('loggedInUser');
-    if(loggedInUser){
-      const userData = JSON.parse(loggedInUser);
-      setUser(userData.role);
-      setLoggedInUser(userData.data);
-    }
-  },[])
+  // useEffect(()=>{
+  //   const loggedInUser = localStorage.getItem('loggedInUser');
+  //   if(loggedInUser){
+  //     const userData = JSON.parse(loggedInUser);
+  //     setUser(userData.role);
+  //     setLoggedInUser(userData.data);
+  //   }
+  // },[])
   
 
   // useEffect(()=>{
@@ -59,8 +59,8 @@ function App() {
   return (
     <>
       {!user && <Login handleLogin={handleLogin} />}
-      {user === 'employee' ? <EmployeeDashboard data={loggedInUser} changeUser={setUser}/>: null}
-      {user === 'admin' ? <AdminDashboard changeUser={setUser}/>: null}
+      {user === 'employee' ? <EmployeeDashboard/>: null}
+      {user === 'admin' ? <AdminDashboard />: null}
     </>
   );
 }
